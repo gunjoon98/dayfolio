@@ -58,7 +58,7 @@ public {엔티티명}({필드타입} {필드명}, ...) {
 
 - `@Builder`는 클래스가 아닌 **생성자**에 붙임
 - 접근제어자 `public`
-- PK 포함 모든 필드를 파라미터로 받고, 파라미터명과 필드명을 **동일하게** 맞춤 (`this.memberSeq = memberSeq`)
+- PK 포함 모든 필드를 파라미터로 받고, 파라미터명과 필드명을 **동일하게** 맞춤
 
 ### 5. 임포트
 
@@ -105,4 +105,4 @@ public class {엔티티명} {
 - [ ] `GenerationType.SEQUENCE` + `@SequenceGenerator(allocationSize = 1)` 조합인가
 - [ ] setter가 없는가
 - [ ] `@Builder`가 생성자에 붙어 있는가
-- [ ] 생성자 파라미터명과 필드명이 일치하는가 (`this.memberSeq = memberSeq`)
+- [ ] 생성자 파라미터명과 필드명이 일치하는가
