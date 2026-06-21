@@ -20,8 +20,10 @@ repositories {
 }
 
 dependencies {
+    api 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.projectlombok:lombok:1.18.42'
+    annotationProcessor 'org.projectlombok:lombok:1.18.42'
     runtimeOnly 'com.oracle.database.jdbc:ojdbc11' // 오라클 드라이버
 
     implementation 'org.springframework.boot:spring-boot-starter-web'

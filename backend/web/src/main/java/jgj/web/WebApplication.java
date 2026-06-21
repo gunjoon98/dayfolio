@@ -2,10 +2,14 @@ package jgj.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"jgj.web", "jgj.common"})
 @EnableJpaAuditing
+@EntityScan("jgj.common.entity")
+@EnableJpaRepositories("jgj.common.repository")
 public class WebApplication {
 
     public static void main(String[] args) {

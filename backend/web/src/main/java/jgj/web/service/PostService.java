@@ -1,8 +1,8 @@
 package jgj.web.service;
 
 import jgj.web.dto.PostDto;
-import jgj.web.entity.Post;
-import jgj.web.repository.PostRepository;
+import jgj.common.entity.Post;
+import jgj.common.repository.PostRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

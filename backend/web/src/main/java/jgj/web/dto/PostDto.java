@@ -1,6 +1,6 @@
 package jgj.web.dto;
 
-import jgj.web.entity.Post;
+import jgj.common.entity.Post;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

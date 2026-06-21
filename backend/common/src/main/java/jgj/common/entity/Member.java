@@ -1,4 +1,4 @@
-package jgj.web.entity;
+package jgj.common.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -14,20 +14,18 @@ public class Member extends BaseEntity {
     @Column(name = "member_seq")
     private Long memberSeq;
 
-    private String name;
+    @Column(name = "id")
+    private String loginId;
 
-    private String city;
+    private String password;
 
-    private String street;
-
-    private String zipcode;
+    private String nickname;
 
     @Builder
-    public Member(Long memberSeq, String name, String city, String street, String zipcode) {
+    public Member(Long memberSeq, String loginId, String password, String nickname) {
         this.memberSeq = memberSeq;
-        this.name = name;
-        this.city = city;
-        this.street = street;
-        this.zipcode = zipcode;
+        this.loginId = loginId;
+        this.password = password;
+        this.nickname = nickname;
     }
 }

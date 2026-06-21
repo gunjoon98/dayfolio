@@ -1,4 +1,4 @@
-package jgj.web.entity;
+package jgj.common.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;
