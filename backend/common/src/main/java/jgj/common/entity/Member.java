@@ -9,10 +9,10 @@ import lombok.*;
 public class Member extends BaseEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "member_seq")
-    @SequenceGenerator(name = "member_seq", sequenceName = "MEMBER_SEQ", allocationSize = 1)
-    @Column(name = "member_seq")
-    private Long memberSeq;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_member")
+    @SequenceGenerator(name = "seq_member", sequenceName = "SEQ_MEMBER", allocationSize = 1)
+    @Column(name = "seq_member")
+    private Long seqMember;
 
     @Column(name = "id")
     private String loginId;
@@ -22,8 +22,7 @@ public class Member extends BaseEntity {
     private String nickname;
 
     @Builder
-    public Member(Long memberSeq, String loginId, String password, String nickname) {
-        this.memberSeq = memberSeq;
+    public Member(String loginId, String password, String nickname) {
         this.loginId = loginId;
         this.password = password;
         this.nickname = nickname;
