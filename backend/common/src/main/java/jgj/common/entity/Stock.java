@@ -13,6 +13,7 @@ public class Stock extends BaseEntity {
     @SequenceGenerator(name = "seq_stock", sequenceName = "SEQ_STOCK", allocationSize = 1)
     private Long seqStock;
 
+    @Column(unique = true)
     private String code;
 
     private String name;
@@ -35,6 +36,10 @@ public class Stock extends BaseEntity {
         this.type = type;
         this.country = country;
         this.order = order;
+        this.useYn = useYn;
+    }
+
+    public void changeUseYn(Boolean useYn) {
         this.useYn = useYn;
     }
 }
